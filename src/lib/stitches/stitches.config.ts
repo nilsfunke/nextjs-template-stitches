@@ -1,7 +1,30 @@
 import { createStitches, CSS as StitchesCSS } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 
-const defaultDimensions = {
+const space = {
+  0: '0',
+  4: '0.25rem',
+  8: '0.5rem',
+  12: '0.75rem',
+  16: '1rem',
+  20: '1.25rem',
+  24: '1.5rem',
+  28: '1.75rem',
+  32: '2rem',
+  40: '2.5rem',
+  48: '3rem',
+  56: '3.5rem',
+  64: '4rem',
+  72: '4.5rem',
+  80: '5rem',
+  96: '6rem',
+  112: '7rem',
+  128: '8rem',
+  256: '16rem',
+  512: '24rem',
+};
+
+const sizes = {
   0: '0',
   4: '0.25rem',
   8: '0.5rem',
@@ -41,10 +64,10 @@ const { config, css, getCssText, globalCss, keyframes, styled, theme } =
         gray11: '#687076',
         gray12: '#11181c',
       },
-      space: { ...defaultDimensions },
-      sizes: { ...defaultDimensions },
+      space: { ...space },
+      sizes: { ...sizes },
       fonts: {
-        text: '"Inter"',
+        primary: '"Inter"',
       },
       fontSizes: {
         14: '0.875rem',
@@ -61,6 +84,11 @@ const { config, css, getCssText, globalCss, keyframes, styled, theme } =
         72: '4.5rem',
         80: '5rem',
       },
+      fontWeights: {
+        regular: '400',
+        semiBold: '600',
+        bold: '700',
+      },
       lineHeights: {
         14: '1rem',
         16: '1.25rem',
@@ -75,6 +103,9 @@ const { config, css, getCssText, globalCss, keyframes, styled, theme } =
         64: '4.25rem',
         72: '4.75rem',
         80: '5.25rem',
+      },
+      zIndices: {
+        cookieBanner: '999',
       },
     },
     media: {
@@ -125,4 +156,5 @@ const { config, css, getCssText, globalCss, keyframes, styled, theme } =
 export type CSS = StitchesCSS<typeof config>;
 export type { VariantProps } from '@stitches/react';
 
+export { sizes, space };
 export { config, css, getCssText, globalCss, keyframes, styled, theme };

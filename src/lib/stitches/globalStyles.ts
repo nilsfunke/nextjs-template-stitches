@@ -7,7 +7,7 @@ const globalStyles = globalCss({
     boxSizing: 'border-box',
   },
   body: {
-    fontFamily: '$text',
+    fontFamily: '$primary',
     fontSize: '$16',
     color: '$gray12',
     backgroundColor: '$gray1',
