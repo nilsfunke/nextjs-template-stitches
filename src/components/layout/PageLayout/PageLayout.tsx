@@ -6,6 +6,7 @@ import {
   CookiesAcceptedState,
   setCookiesAcceptedCookie,
 } from '@utils';
+
 import { CookieBannerProps } from '../CookieBanner';
 
 const CookieBanner = dynamic(

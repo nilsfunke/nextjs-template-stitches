@@ -1,29 +1,17 @@
 import { generateSizes, styled } from '@lib/stitches';
 
 const Spacer = styled('div', {
+  width: '100%',
+  height: '100%',
+
   variants: {
-    axis: {
-      vertical: {},
-      horizontal: {},
+    x: {
+      ...generateSizes('width'),
     },
-    size: {
-      ...generateSizes('size'),
+    y: {
+      ...generateSizes('height'),
     },
   },
-  compoundVariants: [
-    {
-      axis: 'vertical',
-      css: {
-        width: '100%',
-      },
-    },
-    {
-      axis: 'horizontal',
-      css: {
-        height: '100%',
-      },
-    },
-  ],
 });
 
 export { Spacer };

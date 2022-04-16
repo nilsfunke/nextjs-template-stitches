@@ -1,4 +1,5 @@
 import { styled } from '@lib/stitches';
+
 import { StyledIcon } from '../Icon';
 
 const StyledButton = styled('button', {

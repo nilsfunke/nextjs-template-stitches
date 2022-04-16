@@ -1,4 +1,6 @@
-import { CSS, space } from './stitches.config';
+import { CSS } from './stitches.config';
+
+import { fontSizes, sizes, space } from './tokens';
 
 type Space = {
   0: CSS;
@@ -59,7 +61,7 @@ type Sizes = {
   512: CSS;
 };
 function generateSizes(cssProp: string): Sizes {
-  const keys = Object.keys(space);
+  const keys = Object.keys(sizes);
 
   const variants = {} as any;
   for (let key of keys) {
@@ -72,4 +74,31 @@ function generateSizes(cssProp: string): Sizes {
   return variants as Sizes;
 }
 
-export { generateSpace, generateSizes };
+type Text = {
+  14: CSS;
+  16: CSS;
+  18: CSS;
+  20: CSS;
+  24: CSS;
+  28: CSS;
+  32: CSS;
+  40: CSS;
+  48: CSS;
+  56: CSS;
+  64: CSS;
+  72: CSS;
+  80: CSS;
+};
+const generateText = (): Text => {
+  const variants = {} as Text;
+  for (let key of Object.keys(variants)) {
+    let variant = {} as any;
+    variant['text'] = `$${key}`;
+
+    (variants as any)[key] = variant;
+  }
+
+  return variants as Text;
+};
+
+export { generateSpace, generateSizes, generateText };
