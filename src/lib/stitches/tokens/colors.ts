@@ -1,4 +1,4 @@
-const colors = {
+const textColors = {
   gray1: '#fbfcfd',
   gray2: '#f8f9fa',
   gray3: '#f1f3f5',
@@ -13,4 +13,8 @@ const colors = {
   gray12: '#11181c',
 };
 
-export { colors };
+const colors = {
+  ...textColors,
+};
+
+export { colors, textColors };

@@ -1,4 +1,4 @@
-import { generateText, styled } from '@lib/stitches';
+import { generateText, generateTextVariants, styled } from '@lib/stitches';
 
 const Text = styled('span', {
   display: 'block',
@@ -13,6 +13,7 @@ const Text = styled('span', {
       default: {
         color: 'currentColor',
       },
+      ...generateTextVariants(),
     },
     weight: {
       regular: {

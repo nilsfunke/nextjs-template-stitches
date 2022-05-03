@@ -1,4 +1,4 @@
-import { generateText, styled } from '@lib/stitches';
+import { generateText, generateTextVariants, styled } from '@lib/stitches';
 
 const Heading = styled('span', {
   display: 'block',
@@ -24,6 +24,7 @@ const Heading = styled('span', {
       default: {
         color: 'currentColor',
       },
+      ...generateTextVariants(),
     },
     align: {
       default: {
@@ -42,7 +43,7 @@ const Heading = styled('span', {
   },
   defaultVariants: {
     size: '32',
-    weight: 'black',
+    weight: 'bold',
     variant: 'default',
     align: 'default',
   },

@@ -1,6 +1,6 @@
 import { CSS } from './stitches.config';
 
-import { fontSizes, sizes, space } from './tokens';
+import { colors, fontSizes, sizes, space, textColors } from './tokens';
 
 type Space = {
   0: CSS;
@@ -101,4 +101,30 @@ const generateText = (): Text => {
   return variants as Text;
 };
 
-export { generateSpace, generateSizes, generateText };
+type TextVariants = {
+  gray1: CSS;
+  gray2: CSS;
+  gray3: CSS;
+  gray4: CSS;
+  gray5: CSS;
+  gray6: CSS;
+  gray7: CSS;
+  gray8: CSS;
+  gray9: CSS;
+  gray10: CSS;
+  gray11: CSS;
+  gray12: CSS;
+};
+const generateTextVariants = (): TextVariants => {
+  const variants = {} as TextVariants;
+  for (let key of Object.keys(textColors)) {
+    let variant = {} as any;
+    variant['color'] = `$${key}`;
+
+    (variants as any)[key] = variant;
+  }
+
+  return variants as TextVariants;
+};
+
+export { generateSpace, generateSizes, generateText, generateTextVariants };
