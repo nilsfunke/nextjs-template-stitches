@@ -11,13 +11,13 @@ const HomePage: React.FC<HomePageProps> = () => {
       <Wrapper>
         <Container>
           <Flex direction="column" justify="center">
-            <Heading as="h1" size="32">
+            <Heading as="h1" size="32" variant="typeface-primary">
               NextJS Template
             </Heading>
 
             <Spacer y="16" />
 
-            <Text size="18" variant="gray11">
+            <Text size="18" variant="typeface-secondary">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
               vero sapiente cupiditate repellat facere distinctio explicabo
               laudantium incidunt totam deserunt. Ipsum facilis culpa itaque

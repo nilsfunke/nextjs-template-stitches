@@ -9,8 +9,8 @@ const globalStyles = globalCss({
   body: {
     fontFamily: '$primary',
     fontSize: '$16',
-    color: '$gray12',
-    backgroundColor: '$gray1',
+    color: '$typeface-primary',
+    backgroundColor: '$background-primary',
   },
 });
 

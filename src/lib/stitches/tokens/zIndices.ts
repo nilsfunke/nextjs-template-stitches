@@ -1,6 +1,6 @@
 const zIndices = {
-  cookieBanner: '998',
-  pageHeader: '999',
+  'cookie-banner': '998',
+  'page-header': '999',
 };
 
 export { zIndices };

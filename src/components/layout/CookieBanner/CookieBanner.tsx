@@ -19,7 +19,7 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onCookiesAccepted }) => {
         left: '0',
         right: '0',
         bottom: '0',
-        zIndex: '$cookieBanner',
+        zIndex: '$cookie-banner',
       }}
     >
       Hello CookieBanner!
